@@ -1,8 +1,8 @@
 # Большие данные и веса сохраняются вне репозитория.
-data/
-artifacts/
-storage/
-checkpoints/
+/data/
+/artifacts/
+/storage/
+/checkpoints/
 *.pt
 *.pth
 *.bin
@@ -21,3 +21,7 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 .DS_Store
+build/
+dist/
+*.egg-info/
+.pytest_cache/

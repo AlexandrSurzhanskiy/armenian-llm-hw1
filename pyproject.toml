@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "armenian-llm-hw1"
+version = "0.1.0"
+description = "Armenian decoder-only GPT trained from scratch"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "torch==2.9.1",
+    "numpy==2.4.2",
+    "tokenizers==0.22.1",
+    "pyarrow==20.0.0",
+    "huggingface-hub>=0.30,<2",
+]
+
+[project.optional-dependencies]
+notebooks = ["ipython>=8,<10", "nbformat>=5.10,<6"]
+reports = ["matplotlib>=3.9,<4", "nbformat>=5.10,<6"]
+logging = ["tensorboard>=2.17,<3"]
+
+[project.scripts]
+armenian-llm = "armenian_llm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
