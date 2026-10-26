@@ -1,0 +1,23 @@
+# Большие данные и веса сохраняются вне репозитория.
+data/
+artifacts/
+storage/
+checkpoints/
+*.pt
+*.pth
+*.bin
+*.npy
+*.npz
+*.parquet
+*.safetensors
+*.zip
+*.tar
+*.tar.gz
+*.part
+.env
+.env.*
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store

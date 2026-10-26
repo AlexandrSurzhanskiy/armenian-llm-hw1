@@ -1,0 +1,45 @@
+{
+  "model": {
+    "vocab_size": 16000,
+    "context_length": 1024,
+    "n_layers": 12,
+    "n_heads": 12,
+    "d_model": 768,
+    "ffn_hidden_dim": 2048,
+    "dropout": 0.0,
+    "rope_theta": 10000.0,
+    "norm_eps": 1e-05
+  },
+  "training": {
+    "total_steps": 5000,
+    "micro_batch_size": 32,
+    "gradient_accumulation_steps": 4,
+    "max_learning_rate": 0.0001,
+    "min_learning_rate": 1e-05,
+    "warmup_steps": 100,
+    "weight_decay": 0.1,
+    "gradient_clip": 1.0,
+    "eval_interval": 500,
+    "log_interval": 50,
+    "sample_tokens": 64,
+    "seed": 42
+  },
+  "variant": "news",
+  "wikipedia_fraction": 0.0,
+  "fingerprints": {
+    "tokenizer_sha256": "e1342bbf91d97a3c51407486af0fb29e18b3e2524bb44c827e5f380fea81121a",
+    "initial_checkpoint_sha256": "574dd068ec98249ed438d587f4654fc26dcdc0c397dd597e1955bd8be2db59ca",
+    "mixture_plan_sha256": "52bb6673ce96bcfe25e5e671994f84b0e867b3cf49b74ac6907a2dae97a7a27a",
+    "trainer_sha256": "0a96609f1cf4e4ebf018afecab1fa32be2c7dda2d77d9fdc8e4cc26ab0cf9608",
+    "shared_training_code_sha256": "159f7f9aa6319543b0fe27efb7777ac06d05bb987399dd7e759002737b98bf08"
+  },
+  "origin": {
+    "checkpoint": "/data/armenian_llm/artifacts/checkpoints/arm_gpt_97m/best.pt",
+    "step": 17832,
+    "tokens_seen": 2337142784
+  },
+  "optimizer_initialization": "fresh AdamW in both branches",
+  "selection": "same validation loss weighted by the saved mixture plan in both branches",
+  "parameters": 97241856,
+  "torch_version": "2.9.1+cu128"
+}

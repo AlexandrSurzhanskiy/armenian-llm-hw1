@@ -1,0 +1,5 @@
+{
+  "ngram_size": 10,
+  "max_repetition_fraction": 0.2,
+  "min_armenian_share": 0.8
+}

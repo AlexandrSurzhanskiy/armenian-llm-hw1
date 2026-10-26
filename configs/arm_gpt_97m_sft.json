@@ -1,0 +1,55 @@
+{
+  "stage": "sft",
+  "model": {
+    "vocab_size": 16000,
+    "context_length": 1024,
+    "n_layers": 12,
+    "n_heads": 12,
+    "d_model": 768,
+    "ffn_hidden_dim": 2048,
+    "dropout": 0.0,
+    "rope_theta": 10000.0,
+    "norm_eps": 1e-05
+  },
+  "training": {
+    "epochs": 3,
+    "micro_batch_size": 32,
+    "gradient_accumulation_steps": 2,
+    "max_learning_rate": 5e-05,
+    "min_learning_rate": 5e-06,
+    "warmup_steps": 10,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "log_interval": 10,
+    "sample_tokens": 128,
+    "seed": 42
+  },
+  "parameters": 97241856,
+  "fingerprints": {
+    "tokenizer_sha256": "e1342bbf91d97a3c51407486af0fb29e18b3e2524bb44c827e5f380fea81121a",
+    "data_metadata_sha256": "652623b6d2529d8c5c6fab4e158a4f132cf34966d439ebb292ddb0fb6549a9c5",
+    "source_checkpoint_sha256": "574dd068ec98249ed438d587f4654fc26dcdc0c397dd597e1955bd8be2db59ca"
+  },
+  "provenance": {
+    "source_checkpoint": "/data/armenian_llm/artifacts/checkpoints/arm_gpt_97m/best.pt",
+    "source_step": 17832,
+    "source_tokens_seen": 2337142784,
+    "source_fingerprints": {
+      "tokenizer_sha256": "e1342bbf91d97a3c51407486af0fb29e18b3e2524bb44c827e5f380fea81121a",
+      "data_metadata_sha256": "37c0dbccaa68b51819186fc1a0afd283f46460f622891001fd10849b234ccf55"
+    }
+  },
+  "steps_per_epoch": 49,
+  "total_steps": 147,
+  "train_examples": 3136,
+  "validation_examples": 391,
+  "prompt_template": "Հարց՝ {question}\nՊատասխան՝",
+  "objective": "mean next-token cross-entropy over answer and EOS tokens only",
+  "tokens_seen_definition": "supervised answer and EOS tokens in SFT only",
+  "batching": "shuffle without replacement each epoch; dynamic right padding; token-weighted accumulation",
+  "checkpoint_selection": "minimum full SFT validation answer loss, evaluated before training and after each epoch",
+  "precision": "bf16_autocast_fp32_parameters",
+  "torch_version": "2.9.1+cu128",
+  "numpy_version": "2.4.2",
+  "data_dir": "/data/armenian_llm/data/sft/aya_dolly_qa"
+}

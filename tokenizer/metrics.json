@@ -1,0 +1,35 @@
+{
+  "training_seconds": 44.06978920986876,
+  "vocab_size_actual": 16000,
+  "train_sample": {
+    "documents": 500000,
+    "text_bytes": 1236309396,
+    "characters": 673392208,
+    "whitespace_words": 87008593,
+    "tokens": 141265911,
+    "tokens_per_document_mean": 282.531822,
+    "tokens_per_document_median": 195.0,
+    "tokens_per_document_p95": 786.0,
+    "characters_per_token": 4.766841506440998,
+    "bytes_per_token": 8.75164706933437,
+    "tokens_per_whitespace_word": 1.6235857416979493,
+    "roundtrip_errors": 0
+  },
+  "validation": {
+    "documents": 5000,
+    "text_bytes": 12265509,
+    "characters": 6679514,
+    "whitespace_words": 863470,
+    "tokens": 1401659,
+    "tokens_per_document_mean": 280.3318,
+    "tokens_per_document_median": 192.0,
+    "tokens_per_document_p95": 787.05,
+    "characters_per_token": 4.765434388820676,
+    "bytes_per_token": 8.75070826784546,
+    "tokens_per_whitespace_word": 1.6232862751456334,
+    "roundtrip_errors": 0
+  },
+  "unused_tokens_on_train_sample": 50,
+  "tokens_seen_1_to_9_times_on_train_sample": 20,
+  "probes_roundtrip_errors": 0
+}

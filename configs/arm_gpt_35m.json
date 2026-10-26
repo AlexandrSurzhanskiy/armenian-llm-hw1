@@ -1,0 +1,44 @@
+{
+  "model": {
+    "vocab_size": 16000,
+    "context_length": 1024,
+    "n_layers": 8,
+    "n_heads": 8,
+    "d_model": 512,
+    "ffn_hidden_dim": 1536,
+    "dropout": 0.0,
+    "rope_theta": 10000.0,
+    "norm_eps": 1e-05
+  },
+  "training": {
+    "epochs": 1,
+    "micro_batch_size": 32,
+    "gradient_accumulation_steps": 4,
+    "max_learning_rate": 0.0006,
+    "min_learning_rate": 6e-05,
+    "warmup_steps": 200,
+    "weight_decay": 0.1,
+    "gradient_clip": 1.0,
+    "eval_interval": 500,
+    "log_interval": 50,
+    "sample_tokens": 96,
+    "seed": 42,
+    "max_steps": null
+  },
+  "fingerprints": {
+    "tokenizer_sha256": "e1342bbf91d97a3c51407486af0fb29e18b3e2524bb44c827e5f380fea81121a",
+    "data_metadata_sha256": "37c0dbccaa68b51819186fc1a0afd283f46460f622891001fd10849b234ccf55"
+  },
+  "parameters": 35463680,
+  "steps_per_epoch": 8916,
+  "total_steps": 8916,
+  "train_windows": 1141183,
+  "discarded_train_tail_targets": 25,
+  "sampling": "shuffled_nonoverlapping_windows_without_replacement_each_epoch",
+  "validation": "all_next_token_targets_in_separate_nonoverlapping_context_windows",
+  "precision": "bf16_autocast_fp32_parameters",
+  "torch_version": "2.9.1+cu128",
+  "numpy_version": "2.4.2",
+  "data_dir": "/data/armenian_llm/data/tokenized/bpe_16000_500000",
+  "tokenizer_dir": "/data/armenian_llm/artifacts/tokenizers/bpe_16000_500000"
+}

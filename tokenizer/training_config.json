@@ -1,0 +1,84 @@
+{
+  "algorithm": "byte_level_bpe",
+  "vocab_size_requested": 16000,
+  "vocab_size_actual": 16000,
+  "min_frequency": 2,
+  "initial_alphabet_size": 256,
+  "add_prefix_space": false,
+  "special_token_ids": {
+    "<pad>": 0,
+    "<bos>": 1,
+    "<eos>": 2
+  },
+  "tokenizers_version": "0.22.1",
+  "python_version": "3.12.14",
+  "data_sha256": {
+    "train": "6541428896fa91020eb3e3ba335d973ec69a21432777f3668490d775f36dbb3a",
+    "validation": "0dea7d8bbf98345e5cca292117ce5ad1f4b67b4729d98d5f0c8904c52cf05432"
+  },
+  "sample_info": {
+    "seed": 42,
+    "selection": "uniform_without_replacement",
+    "input_dir": "/workdir/data/processed/armweb",
+    "cleaning_config": {
+      "ngram_size": 10,
+      "max_repetition_fraction": 0.2,
+      "min_armenian_share": 0.8
+    },
+    "splits": {
+      "train": {
+        "input_documents": 4102940,
+        "sample_documents": 500000,
+        "sample_text_bytes": 1236309396,
+        "sample_file_bytes": 1296125118,
+        "sources": {
+          "Blognews": 26737,
+          "Tert": 60165,
+          "Lragir": 21505,
+          "Panarmenian": 22238,
+          "Armtimes": 28173,
+          "Aravot": 41450,
+          "168": 44747,
+          "Lurer": 26666,
+          "1in": 81741,
+          "News": 88632,
+          "Mamul": 25753,
+          "Iravaban": 2306,
+          "Armenpress": 1601,
+          "Azatutyun": 4561,
+          "Asekose": 13685,
+          "Banks": 3244,
+          "Radar": 4856,
+          "Armlur": 1926,
+          "Hraparak": 14
+        }
+      },
+      "validation": {
+        "input_documents": 19116,
+        "sample_documents": 5000,
+        "sample_text_bytes": 12265509,
+        "sample_file_bytes": 12864561,
+        "sources": {
+          "168": 433,
+          "1in": 839,
+          "Aravot": 457,
+          "Armenpress": 13,
+          "Armlur": 14,
+          "Armtimes": 328,
+          "Asekose": 152,
+          "Azatutyun": 81,
+          "Banks": 24,
+          "Blognews": 274,
+          "Iravaban": 12,
+          "Lragir": 200,
+          "Lurer": 237,
+          "Mamul": 250,
+          "News": 850,
+          "Panarmenian": 185,
+          "Radar": 42,
+          "Tert": 609
+        }
+      }
+    }
+  }
+}
